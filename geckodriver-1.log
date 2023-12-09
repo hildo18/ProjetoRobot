@@ -1,0 +1,35 @@
+1702057890435	geckodriver	INFO	Listening on 127.0.0.1:54964
+1702057893528	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "54965" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\HILDOC~1\\AppData\\Local\\Temp\\rust_mozprofileefPMY9"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1702057895049	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1702057895288	Marionette	INFO	Listening on port 54983
+WebDriver BiDi listening on ws://127.0.0.1:54965
+Read port: 54983
+1702057895700	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:54965/devtools/browser/19abfb0b-bf7c-48cd-8cbc-b34fbd2cd498
+1702057905465	Marionette	INFO	Stopped listening on port 54983
+JavaScript warning: https://sampleapp.tricentis.com/101/jquery/jquery-1.12.0.min.js, line 3: Script terminated by timeout at:
+Ra@https://sampleapp.tricentis.com/101/jquery/jquery-1.12.0.min.js:3:27201
+fb@https://sampleapp.tricentis.com/101/jquery/jquery-1.12.0.min.js:3:29436
+get@https://sampleapp.tricentis.com/101/jquery/jquery-1.12.0.min.js:3:31123
+css@https://sampleapp.tricentis.com/101/jquery/jquery-1.12.0.min.js:3:30822
+get@https://sampleapp.tricentis.com/101/jquery/jquery-1.12.0.min.js:4:1679
+cur@https://sampleapp.tricentis.com/101/jquery/jquery-1.12.0.min.js:4:1137
+init@https://sampleapp.tricentis.com/101/jquery/jquery-1.12.0.min.js:4:986
+gb@https://sampleapp.tricentis.com/101/jquery/jquery-1.12.0.min.js:4:789
+createTween@https://sampleapp.tricentis.com/101/jquery/jquery-1.12.0.min.js:4:4736
+n.Animation<.tweeners["*"]<@https://sampleapp.tricentis.com/101/jquery/jquery-1.12.0.min.js:4:5489
+nb@https://sampleapp.tricentis.com/101/jquery/jquery-1.12.0.min.js:4:2553
+ob@https://sampleapp.tricentis.com/101/jquery/jquery-1.12.0.min.js:4:3835
+qb@https://sampleapp.tricentis.com/101/jquery/jquery-1.12.0.min.js:4:5081
+g@https://sampleapp.tricentis.com/101/jquery/jquery-1.12.0.min.js:4:6460
+dequeue@https://sampleapp.tricentis.com/101/jquery/jquery-1.12.0.min.js:3:2159
+n.speed/d.complete@https://sampleapp.tricentis.com/101/jquery/jquery-1.12.0.min.js:4:6227
+i@https://sampleapp.tricentis.com/101/jquery/jquery-1.12.0.min.js:2:27451
+fireWith@https://sampleapp.tricentis.com/101/jquery/jquery-1.12.0.min.js:2:28215
+i@https://sampleapp.tricentis.com/101/jquery/jquery-1.12.0.min.js:4:4485
+n.fx.tick@https://sampleapp.tricentis.com/101/jquery/jquery-1.12.0.min.js:4:7915
+
+Dynamically enable window occlusion 1
