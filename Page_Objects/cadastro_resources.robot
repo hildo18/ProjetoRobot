@@ -69,14 +69,17 @@ Quando informar os dados do "Seguro"
    Click Element  locator=//button[@name='Next (Send Quote)'][contains(.,'Next »')]
 
    #  Esse teste verifica o aba envio de email
+E clicar em submeter
    Input Text    locator=email    text=hildo18@gmail.com
    Input Text    locator=phone    text=8598992353
    Input Text    locator=username    text=Hildo
    Input Text    locator=password    text=Bnb2020!
    Input Text    locator=confirmpassword    text=Bnb2020!
    Click Element  locator=sendemail
+Então sou direcionado para a mensagem de sucesso
    Sleep  10
    Wait Until Element Is Visible    locator=//h2[contains(.,'Sending e-mail success!')]
+   # Wait Until Page Contains    Sending e-mail success!
 
 
                                                 

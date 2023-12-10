@@ -1,13 +1,15 @@
-1702172089814	geckodriver	INFO	Listening on 127.0.0.1:64677
-1702172092853	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64678" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\HILDOC~1\\AppData\\Local\\Temp\\rust_mozprofileRBoEbo"
+1702251360194	geckodriver	INFO	Listening on 127.0.0.1:59170
+1702251363228	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "59171" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\HILDOC~1\\AppData\\Local\\Temp\\rust_mozprofileQweGqG"
 console.warn: services.settings: Ignoring preference override of remote settings server
 console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
-1702172093675	Marionette	INFO	Marionette enabled
+1702251364032	Marionette	INFO	Marionette enabled
 Dynamically enable window occlusion 0
-1702172093887	Marionette	INFO	Listening on port 64687
-WebDriver BiDi listening on ws://127.0.0.1:64678
-Read port: 64687
-1702172094268	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-DevTools listening on ws://127.0.0.1:64678/devtools/browser/005be0d0-48ac-47a4-b339-57adefdc6906
-1702172109839	Marionette	INFO	Stopped listening on port 64687
+1702251364254	Marionette	INFO	Listening on port 59180
+WebDriver BiDi listening on ws://127.0.0.1:59171
+Read port: 59180
+1702251364657	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:59171/devtools/browser/a5b92ff8-b2ee-46a5-9175-536cc1044dd3
+JavaScript error: resource://gre/modules/XULStore.sys.mjs, line 60: Error: Can't find profile directory.
+JavaScript error: https://sampleapp.tricentis.com/101/forms/customization/calculations.js, line 489: ReferenceError: e is not defined
+1702251391887	Marionette	INFO	Stopped listening on port 59180
 Dynamically enable window occlusion 1
