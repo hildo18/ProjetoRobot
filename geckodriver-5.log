@@ -1,0 +1,15 @@
+1702222183016	geckodriver	INFO	Listening on 127.0.0.1:54342
+1702222186069	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "54343" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\HILDOC~1\\AppData\\Local\\Temp\\rust_mozprofilehumsih"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1702222186365	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1702222186438	Marionette	INFO	Listening on port 54352
+WebDriver BiDi listening on ws://127.0.0.1:54343
+Read port: 54352
+1702222186558	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:54343/devtools/browser/9f4f4dde-fccf-4dab-ac5e-5c0a3feead96
+JavaScript error: resource://gre/modules/XULStore.sys.mjs, line 60: Error: Can't find profile directory.
+JavaScript error: https://sampleapp.tricentis.com/101/forms/customization/calculations.js, line 489: ReferenceError: e is not defined
+1702222206233	Marionette	INFO	Stopped listening on port 54352
+Dynamically enable window occlusion 1
