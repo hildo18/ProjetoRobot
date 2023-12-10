@@ -12,7 +12,7 @@ ${CHECKBOX}      //p[@class='group'][contains(.,'Speeding Bungee Jumping Cliff D
 *** Keywords ***
 
 Abrir o navegador
-   Open Browser  browser=chrome
+   Open Browser  browser=chrome  options=add_argument("--incognito")
    Maximize Browser Window
 
 Fechar o navegador
@@ -27,10 +27,16 @@ Dado que estou na tela de cadastro
 
 Quando informar os dados do "Seguro"
     Select From List By Label    Make  Audi
+    Select From List By Label    model   Scooter
+    Input Text    locator=cylindercapacity    text=1500
     Input Text    locator=engineperformance    text=100
     Input Text    locator=//input[contains(@name,'Date of Manufacture')]   text=11/08/2000
     Select From List By Label    Number of Seats   2
+    Click Element    xpath=(//span[contains(@class,'ideal-radio')])[1]
+    Select From List By Label    numberofseatsmotorcycle  2
     Select From List By Label    Fuel Type  Diesel
+    Input Text    locator=payload    text=1000
+    Input Text    locator=totalweight    text=1000
     Input Text    locator=listprice    text=500
     Input Text    locator=//input[contains(@name,'License Plate Number')]    text=0910330
     Input Text    locator=annualmileage    text=100
@@ -43,10 +49,20 @@ Quando informar os dados do "Seguro"
     Input Text    locator=zipcode    text=61760745
     Select From List By Label    Country  Brazil
     Select From List By Label    Occupation  Employee
-    Wait Until Element Is Visible   ${CHECKBOX}
-    Select Checkbox  speeding
-    Checkbox Should Be Selected    Hobbies
-                                            
+    Click Element    xpath=(//span[contains(@class,'ideal-check')])[1]
+    Click Element  locator=//button[@name='Next (Enter Product Data)'][contains(.,'Next »')]
+    Input Text    locator=startdate    text=12/12/2024
+    Select From List By Label    insurancesum  3.000.000,00
+    Select From List By Label    meritrating   Bonus 1
+    Select From List By Label    damageinsurance  No Coverage
+    Click element   xpath=(//span[contains(@class,'ideal-check')])[6]
+    Select From List By Label    courtesycar  No
+    Click Element  locator=//button[@name='Next (Select Price Option)'][contains(.,'Next »')]
+    Sleep  2
+    Click Element  xpath=(//span[contains(@class,'ideal-radio checked')])[3]
+               
+    Sleep  2
+    Click Element  locator=//button[@name='Next (Send Quote)'][contains(.,'Next »')]
                                                 
 
 

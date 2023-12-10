@@ -1,181 +1,288 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20231208 15:51:23.358" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20231209 22:34:48.217" rpa="false" schemaversion="4">
 <suite id="s1" name="Cadastro Testes" source="C:\ProjetoCCEE\WebTesting\cadastro_testes.robot">
 <test id="s1-t1" name="Caso de Teste 01 - Cadastro de seguro" line="10">
 <kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20231208 15:51:23.796" level="INFO">Opening browser 'firefox' to base url 'None'.</msg>
-<status status="PASS" starttime="20231208 15:51:23.796" endtime="20231208 15:51:32.688"/>
+<msg timestamp="20231209 22:34:48.672" level="INFO">Opening browser 'firefox' to base url 'None'.</msg>
+<status status="PASS" starttime="20231209 22:34:48.672" endtime="20231209 22:34:57.442"/>
 </kw>
 <kw name="Dado que estou na tela de cadastro" library="cadastro_resources">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>url=${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20231208 15:51:32.688" level="INFO">Opening url 'http://sampleapp.tricentis.com/101/app.php'</msg>
-<status status="PASS" starttime="20231208 15:51:32.688" endtime="20231208 15:51:36.110"/>
+<msg timestamp="20231209 22:34:57.442" level="INFO">Opening url 'http://sampleapp.tricentis.com/101/app.php'</msg>
+<status status="PASS" starttime="20231209 22:34:57.442" endtime="20231209 22:35:01.520"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>locator=${MENU_VEICULO}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20231208 15:51:36.110" endtime="20231208 15:51:36.175"/>
+<status status="PASS" starttime="20231209 22:35:01.520" endtime="20231209 22:35:01.583"/>
 </kw>
-<status status="PASS" starttime="20231208 15:51:32.688" endtime="20231208 15:51:36.175"/>
+<status status="PASS" starttime="20231209 22:34:57.442" endtime="20231209 22:35:01.583"/>
 </kw>
 <kw name="Quando informar os dados do &quot;Seguro&quot;" library="cadastro_resources">
 <kw name="Select From List By Label" library="SeleniumLibrary">
 <arg>Make</arg>
 <arg>Audi</arg>
 <doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<msg timestamp="20231208 15:51:36.175" level="INFO">Selecting options from selection list 'Make' by label Audi.</msg>
-<status status="PASS" starttime="20231208 15:51:36.175" endtime="20231208 15:51:36.475"/>
+<msg timestamp="20231209 22:35:01.594" level="INFO">Selecting options from selection list 'Make' by label Audi.</msg>
+<status status="PASS" starttime="20231209 22:35:01.594" endtime="20231209 22:35:01.905"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>model</arg>
+<arg>Scooter</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20231209 22:35:01.905" level="INFO">Selecting options from selection list 'model' by label Scooter.</msg>
+<status status="PASS" starttime="20231209 22:35:01.905" endtime="20231209 22:35:02.158"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=cylindercapacity</arg>
+<arg>text=1500</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231209 22:35:02.158" level="INFO">Typing text '1500' into text field 'cylindercapacity'.</msg>
+<status status="PASS" starttime="20231209 22:35:02.158" endtime="20231209 22:35:02.267"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>locator=engineperformance</arg>
 <arg>text=100</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231208 15:51:36.475" level="INFO">Typing text '100' into text field 'engineperformance'.</msg>
-<status status="PASS" starttime="20231208 15:51:36.475" endtime="20231208 15:51:36.600"/>
+<msg timestamp="20231209 22:35:02.267" level="INFO">Typing text '100' into text field 'engineperformance'.</msg>
+<status status="PASS" starttime="20231209 22:35:02.267" endtime="20231209 22:35:02.331"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>locator=//input[contains(@name,'Date of Manufacture')]</arg>
 <arg>text=11/08/2000</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231208 15:51:36.602" level="INFO">Typing text '11/08/2000' into text field '//input[contains(@name,'Date of Manufacture')]'.</msg>
-<status status="PASS" starttime="20231208 15:51:36.602" endtime="20231208 15:51:36.805"/>
+<msg timestamp="20231209 22:35:02.331" level="INFO">Typing text '11/08/2000' into text field '//input[contains(@name,'Date of Manufacture')]'.</msg>
+<status status="PASS" starttime="20231209 22:35:02.331" endtime="20231209 22:35:02.543"/>
 </kw>
 <kw name="Select From List By Label" library="SeleniumLibrary">
 <arg>Number of Seats</arg>
 <arg>2</arg>
 <doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<msg timestamp="20231208 15:51:36.805" level="INFO">Selecting options from selection list 'Number of Seats' by label 2.</msg>
-<status status="PASS" starttime="20231208 15:51:36.805" endtime="20231208 15:51:37.062"/>
+<msg timestamp="20231209 22:35:02.543" level="INFO">Selecting options from selection list 'Number of Seats' by label 2.</msg>
+<status status="PASS" starttime="20231209 22:35:02.543" endtime="20231209 22:35:02.807"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=(//span[contains(@class,'ideal-radio')])[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231209 22:35:02.807" level="INFO">Clicking element 'xpath=(//span[contains(@class,'ideal-radio')])[1]'.</msg>
+<status status="PASS" starttime="20231209 22:35:02.807" endtime="20231209 22:35:03.050"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>numberofseatsmotorcycle</arg>
+<arg>2</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20231209 22:35:03.050" level="INFO">Selecting options from selection list 'numberofseatsmotorcycle' by label 2.</msg>
+<status status="PASS" starttime="20231209 22:35:03.050" endtime="20231209 22:35:03.318"/>
 </kw>
 <kw name="Select From List By Label" library="SeleniumLibrary">
 <arg>Fuel Type</arg>
 <arg>Diesel</arg>
 <doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<msg timestamp="20231208 15:51:37.062" level="INFO">Selecting options from selection list 'Fuel Type' by label Diesel.</msg>
-<status status="PASS" starttime="20231208 15:51:37.062" endtime="20231208 15:51:37.337"/>
+<msg timestamp="20231209 22:35:03.320" level="INFO">Selecting options from selection list 'Fuel Type' by label Diesel.</msg>
+<status status="PASS" starttime="20231209 22:35:03.320" endtime="20231209 22:35:03.584"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=payload</arg>
+<arg>text=1000</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231209 22:35:03.584" level="INFO">Typing text '1000' into text field 'payload'.</msg>
+<status status="PASS" starttime="20231209 22:35:03.584" endtime="20231209 22:35:03.651"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=totalweight</arg>
+<arg>text=1000</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231209 22:35:03.651" level="INFO">Typing text '1000' into text field 'totalweight'.</msg>
+<status status="PASS" starttime="20231209 22:35:03.651" endtime="20231209 22:35:03.726"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>locator=listprice</arg>
 <arg>text=500</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231208 15:51:37.337" level="INFO">Typing text '500' into text field 'listprice'.</msg>
-<status status="PASS" starttime="20231208 15:51:37.337" endtime="20231208 15:51:37.438"/>
+<msg timestamp="20231209 22:35:03.726" level="INFO">Typing text '500' into text field 'listprice'.</msg>
+<status status="PASS" starttime="20231209 22:35:03.726" endtime="20231209 22:35:03.794"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>locator=//input[contains(@name,'License Plate Number')]</arg>
 <arg>text=0910330</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231208 15:51:37.438" level="INFO">Typing text '0910330' into text field '//input[contains(@name,'License Plate Number')]'.</msg>
-<status status="PASS" starttime="20231208 15:51:37.438" endtime="20231208 15:51:37.518"/>
+<msg timestamp="20231209 22:35:03.806" level="INFO">Typing text '0910330' into text field '//input[contains(@name,'License Plate Number')]'.</msg>
+<status status="PASS" starttime="20231209 22:35:03.794" endtime="20231209 22:35:03.869"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>locator=annualmileage</arg>
 <arg>text=100</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231208 15:51:37.518" level="INFO">Typing text '100' into text field 'annualmileage'.</msg>
-<status status="PASS" starttime="20231208 15:51:37.518" endtime="20231208 15:51:37.597"/>
+<msg timestamp="20231209 22:35:03.869" level="INFO">Typing text '100' into text field 'annualmileage'.</msg>
+<status status="PASS" starttime="20231209 22:35:03.869" endtime="20231209 22:35:03.932"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>locator=//button[@name='Next (Enter Insurant Data)'][contains(.,'Next »')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231208 15:51:37.597" level="INFO">Clicking element '//button[@name='Next (Enter Insurant Data)'][contains(.,'Next »')]'.</msg>
-<status status="PASS" starttime="20231208 15:51:37.597" endtime="20231208 15:51:37.883"/>
+<msg timestamp="20231209 22:35:03.932" level="INFO">Clicking element '//button[@name='Next (Enter Insurant Data)'][contains(.,'Next »')]'.</msg>
+<status status="PASS" starttime="20231209 22:35:03.932" endtime="20231209 22:35:04.218"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>locator=${MENU_SEGURO}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20231208 15:51:37.883" endtime="20231208 15:51:37.901"/>
+<status status="PASS" starttime="20231209 22:35:04.218" endtime="20231209 22:35:04.237"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>locator=firstname</arg>
 <arg>text=Hildo</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231208 15:51:37.915" level="INFO">Typing text 'Hildo' into text field 'firstname'.</msg>
-<status status="PASS" starttime="20231208 15:51:37.901" endtime="20231208 15:51:37.979"/>
+<msg timestamp="20231209 22:35:04.250" level="INFO">Typing text 'Hildo' into text field 'firstname'.</msg>
+<status status="PASS" starttime="20231209 22:35:04.237" endtime="20231209 22:35:04.336"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>locator=lastname</arg>
 <arg>text=Costa</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231208 15:51:37.979" level="INFO">Typing text 'Costa' into text field 'lastname'.</msg>
-<status status="PASS" starttime="20231208 15:51:37.979" endtime="20231208 15:51:38.074"/>
+<msg timestamp="20231209 22:35:04.338" level="INFO">Typing text 'Costa' into text field 'lastname'.</msg>
+<status status="PASS" starttime="20231209 22:35:04.338" endtime="20231209 22:35:04.410"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>locator=birthdate</arg>
 <arg>text=11/08/1990</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231208 15:51:38.074" level="INFO">Typing text '11/08/1990' into text field 'birthdate'.</msg>
-<status status="PASS" starttime="20231208 15:51:38.074" endtime="20231208 15:51:38.237"/>
+<msg timestamp="20231209 22:35:04.426" level="INFO">Typing text '11/08/1990' into text field 'birthdate'.</msg>
+<status status="PASS" starttime="20231209 22:35:04.410" endtime="20231209 22:35:04.608"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>locator=streetaddress</arg>
 <arg>text=Rua Pajacus</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231208 15:51:38.237" level="INFO">Typing text 'Rua Pajacus' into text field 'streetaddress'.</msg>
-<status status="PASS" starttime="20231208 15:51:38.237" endtime="20231208 15:51:38.329"/>
+<msg timestamp="20231209 22:35:04.608" level="INFO">Typing text 'Rua Pajacus' into text field 'streetaddress'.</msg>
+<status status="PASS" starttime="20231209 22:35:04.608" endtime="20231209 22:35:04.719"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>locator=zipcode</arg>
 <arg>text=61760745</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231208 15:51:38.329" level="INFO">Typing text '61760745' into text field 'zipcode'.</msg>
-<status status="PASS" starttime="20231208 15:51:38.329" endtime="20231208 15:51:38.442"/>
+<msg timestamp="20231209 22:35:04.719" level="INFO">Typing text '61760745' into text field 'zipcode'.</msg>
+<status status="PASS" starttime="20231209 22:35:04.719" endtime="20231209 22:35:04.824"/>
 </kw>
 <kw name="Select From List By Label" library="SeleniumLibrary">
 <arg>Country</arg>
 <arg>Brazil</arg>
 <doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<msg timestamp="20231208 15:51:38.442" level="INFO">Selecting options from selection list 'Country' by label Brazil.</msg>
-<status status="PASS" starttime="20231208 15:51:38.442" endtime="20231208 15:51:38.709"/>
+<msg timestamp="20231209 22:35:04.824" level="INFO">Selecting options from selection list 'Country' by label Brazil.</msg>
+<status status="PASS" starttime="20231209 22:35:04.824" endtime="20231209 22:35:05.092"/>
 </kw>
 <kw name="Select From List By Label" library="SeleniumLibrary">
 <arg>Occupation</arg>
 <arg>Employee</arg>
 <doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<msg timestamp="20231208 15:51:38.709" level="INFO">Selecting options from selection list 'Occupation' by label Employee.</msg>
-<status status="PASS" starttime="20231208 15:51:38.709" endtime="20231208 15:51:38.987"/>
+<msg timestamp="20231209 22:35:05.092" level="INFO">Selecting options from selection list 'Occupation' by label Employee.</msg>
+<status status="PASS" starttime="20231209 22:35:05.092" endtime="20231209 22:35:05.352"/>
 </kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${CHECKBOX}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<msg timestamp="20231208 15:51:44.258" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-67.png"&gt;&lt;img src="selenium-screenshot-67.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20231208 15:51:44.258" level="FAIL">Element '//p[@class='group'][contains(.,'Speeding Bungee Jumping Cliff Diving Skydiving Other')]' not visible after 5 seconds.</msg>
-<status status="FAIL" starttime="20231208 15:51:38.987" endtime="20231208 15:51:44.274"/>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=(//span[contains(@class,'ideal-check')])[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231209 22:35:05.353" level="INFO">Clicking element 'xpath=(//span[contains(@class,'ideal-check')])[1]'.</msg>
+<status status="PASS" starttime="20231209 22:35:05.352" endtime="20231209 22:35:05.604"/>
 </kw>
-<kw name="Select Checkbox" library="SeleniumLibrary">
-<arg>speeding</arg>
-<doc>Selects the checkbox identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20231208 15:51:44.274" endtime="20231208 15:51:44.274"/>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=//button[@name='Next (Enter Product Data)'][contains(.,'Next »')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231209 22:35:05.604" level="INFO">Clicking element '//button[@name='Next (Enter Product Data)'][contains(.,'Next »')]'.</msg>
+<status status="PASS" starttime="20231209 22:35:05.604" endtime="20231209 22:35:05.870"/>
 </kw>
-<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
-<arg>Hobbies</arg>
-<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
-<status status="NOT RUN" starttime="20231208 15:51:44.274" endtime="20231208 15:51:44.274"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=startdate</arg>
+<arg>text=12/12/2024</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231209 22:35:05.870" level="INFO">Typing text '12/12/2024' into text field 'startdate'.</msg>
+<status status="PASS" starttime="20231209 22:35:05.870" endtime="20231209 22:35:06.014"/>
 </kw>
-<status status="FAIL" starttime="20231208 15:51:36.175" endtime="20231208 15:51:44.274"/>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>insurancesum</arg>
+<arg>3.000.000,00</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20231209 22:35:06.014" level="INFO">Selecting options from selection list 'insurancesum' by label 3.000.000,00.</msg>
+<status status="PASS" starttime="20231209 22:35:06.014" endtime="20231209 22:35:06.284"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>meritrating</arg>
+<arg>Bonus 1</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20231209 22:35:06.284" level="INFO">Selecting options from selection list 'meritrating' by label Bonus 1.</msg>
+<status status="PASS" starttime="20231209 22:35:06.284" endtime="20231209 22:35:06.571"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>damageinsurance</arg>
+<arg>No Coverage</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20231209 22:35:06.571" level="INFO">Selecting options from selection list 'damageinsurance' by label No Coverage.</msg>
+<status status="PASS" starttime="20231209 22:35:06.571" endtime="20231209 22:35:06.827"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=(//span[contains(@class,'ideal-check')])[6]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231209 22:35:06.827" level="INFO">Clicking element 'xpath=(//span[contains(@class,'ideal-check')])[6]'.</msg>
+<status status="PASS" starttime="20231209 22:35:06.827" endtime="20231209 22:35:07.062"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>courtesycar</arg>
+<arg>No</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20231209 22:35:07.062" level="INFO">Selecting options from selection list 'courtesycar' by label No.</msg>
+<status status="PASS" starttime="20231209 22:35:07.062" endtime="20231209 22:35:07.350"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=//button[@name='Next (Select Price Option)'][contains(.,'Next »')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231209 22:35:07.350" level="INFO">Clicking element '//button[@name='Next (Select Price Option)'][contains(.,'Next »')]'.</msg>
+<status status="PASS" starttime="20231209 22:35:07.350" endtime="20231209 22:35:07.666"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231209 22:35:09.666" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231209 22:35:07.666" endtime="20231209 22:35:09.666"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=(//span[contains(@class,'ideal-radio checked')])[3]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231209 22:35:09.666" level="INFO">Clicking element 'xpath=(//span[contains(@class,'ideal-radio checked')])[3]'.</msg>
+<msg timestamp="20231209 22:35:09.744" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20231209 22:35:09.744" level="FAIL">Element with locator 'xpath=(//span[contains(@class,'ideal-radio checked')])[3]' not found.</msg>
+<status status="FAIL" starttime="20231209 22:35:09.666" endtime="20231209 22:35:09.744"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20231209 22:35:09.744" endtime="20231209 22:35:09.744"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=//button[@name='Next (Send Quote)'][contains(.,'Next »')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231209 22:35:09.744" endtime="20231209 22:35:09.744"/>
+</kw>
+<status status="FAIL" starttime="20231209 22:35:01.583" endtime="20231209 22:35:09.744"/>
 </kw>
 <kw name="Fechar o navegador" library="cadastro_resources" type="TEARDOWN">
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20231208 15:51:44.353" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-68.png"&gt;&lt;img src="selenium-screenshot-68.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20231208 15:51:44.274" endtime="20231208 15:51:44.353"/>
+<msg timestamp="20231209 22:35:09.834" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231209 22:35:09.760" endtime="20231209 22:35:09.834"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20231208 15:51:44.353" endtime="20231208 15:51:48.169"/>
+<status status="PASS" starttime="20231209 22:35:09.834" endtime="20231209 22:35:13.623"/>
 </kw>
-<status status="PASS" starttime="20231208 15:51:44.274" endtime="20231208 15:51:48.169"/>
+<status status="PASS" starttime="20231209 22:35:09.760" endtime="20231209 22:35:13.623"/>
 </kw>
 <doc>Esse teste verifica o cadastro do seguro de um veiculo</doc>
 <tag>cadastro_seguro</tag>
 <tag>seguro</tag>
-<status status="FAIL" starttime="20231208 15:51:23.796" endtime="20231208 15:51:48.169">Element '//p[@class='group'][contains(.,'Speeding Bungee Jumping Cliff Diving Skydiving Other')]' not visible after 5 seconds.</status>
+<status status="FAIL" starttime="20231209 22:34:48.672" endtime="20231209 22:35:13.623">Element with locator 'xpath=(//span[contains(@class,'ideal-radio checked')])[3]' not found.</status>
 </test>
 <doc>essa suite testa o cadastro de informações do site sampleapp</doc>
-<status status="FAIL" starttime="20231208 15:51:23.361" endtime="20231208 15:51:48.172"/>
+<status status="FAIL" starttime="20231209 22:34:48.232" endtime="20231209 22:35:13.623"/>
 </suite>
 <statistics>
 <total>
