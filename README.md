@@ -18,7 +18,8 @@ Este é um repositório que contém a automação de alguns testes WEB. Os sub-t
 - Como editor padrão de código, recomendo baixar e instalar o visual studio code, através do link: https://code.visualstudio.com/download
 - Após download e instalação, no menu esquerdo do visual studio code, selecionar a opção extensions e instalar o plugin "robot framework language server" da Robocop
 - Feito isso, agora é só abrir o projeto, depois acessar o terminal do visual studio code.
-- Digitar o comando no terminal para executar o teste:  robot -d .\results  -i regressivo  '.\tests\cadastro_testes.robot'  
+- Digitar o comando no terminal para executar o teste:  robot  -d  .\results   -i  regressivo   '.\tests\cadastro_testes.robot'
+  
   '-d' => criar uma pasta para guardar o resultado
   '-i' => executar por tags
   'regressivo' => nome da tag
