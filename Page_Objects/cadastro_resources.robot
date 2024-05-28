@@ -3,10 +3,9 @@ Library  SeleniumLibrary
 
 
 *** Variables ***
-${URL}            http://sampleapp.tricentis.com/101/app.php
-${MENU_VEICULO}   //img[contains(@alt,'Tricentis Logo')]
-${MENU_SEGURO}    //label[@class='main'][contains(.,'First Name')]
-${CHECKBOX}      //p[@class='group'][contains(.,'Speeding Bungee Jumping Cliff Diving Skydiving Other')]
+${URL}            https://ultimateqa.com/contact/
+${MENU_CONTATO}   (//font[contains(.,'Contate-nos')])[2]
+
 
 
 *** Keywords ***
@@ -18,69 +17,40 @@ Abrir o navegador
 Fechar o navegador
    Capture Page Screenshot
    Close Browser
-   
-   
 
-Dado que estou na tela de cadastro
+Dado que estou na tela de contato
    Go To    url=${URL}
-   Wait Until Element Is Visible    locator=${MENU_VEICULO}  
+   # Wait Until Element Is Visible    locator=${MENU_CONTATO}  
 
-Quando informar os dados do "Seguro"
+Quando informar os dados do "Contato"
    # Esse teste verifica a aba veiculo
-    Select From List By Label    Make  Audi
-    Select From List By Label    model   Scooter
-    Input Text    locator=cylindercapacity    text=1500
-    Input Text    locator=engineperformance    text=100
-    Input Text    locator=//input[contains(@name,'Date of Manufacture')]   text=11/08/2000
-    Select From List By Label    Number of Seats   2
-    Click Element    xpath=(//span[contains(@class,'ideal-radio')])[1]
-    Select From List By Label    numberofseatsmotorcycle  2
-    Select From List By Label    Fuel Type  Diesel
-    Input Text    locator=payload    text=1000
-    Input Text    locator=totalweight    text=1000
-    Input Text    locator=listprice    text=500
-    Input Text    locator=//input[contains(@name,'License Plate Number')]    text=0910330
-    Input Text    locator=annualmileage    text=100
-    Click Element  locator=//button[@name='Next (Enter Insurant Data)'][contains(.,'Next »')]
-    Wait Until Element Is Visible    locator=${MENU_SEGURO} 
+    Input Text    locator=et_pb_contact_name_0    text=hildo costa fontenele
+    Input Text    locator=et_pb_contact_email_0    text=hildo_costa3@hotmail.com
+    Input Text    locator=et_pb_contact_message_0   text=teste direcionado para mensagem de sucesso
 
-   #  Esse teste verifica a aba Seguro
-    Input Text    locator=firstname    text=Hildo
-    Input Text    locator=lastname    text=Costa
-    Input Text    locator=birthdate    text=11/08/1990
-    Input Text    locator=streetaddress    text=Rua Pajacus
-    Input Text    locator=zipcode    text=61760745
-    Select From List By Label    Country  Brazil
-    Select From List By Label    Occupation  Employee
-    Click Element    xpath=(//span[contains(@class,'ideal-check')])[1]
-    Click Element  locator=//button[@name='Next (Enter Product Data)'][contains(.,'Next »')]
 
-    #  Esse teste verifica o aba Produto
-    Input Text    locator=startdate    text=12/12/2024
-    Select From List By Label    insurancesum  3.000.000,00
-    Select From List By Label    meritrating   Bonus 1
-    Select From List By Label    damageinsurance  No Coverage
-    Click element   xpath=(//span[contains(@class,'ideal-check')])[6]
-    Select From List By Label    courtesycar  No
-    Click Element  locator=//button[@name='Next (Select Price Option)'][contains(.,'Next »')]
+E submeter o envio
+    Click Element  locator=//button[@type='submit'][contains(.,'Submit')]
 
-   #  Esse teste verifica a aba preço
-   Click Element  xpath=(//span[contains(@class,'ideal-radio')])[5]
-   Click Element  locator=//button[@name='Next (Send Quote)'][contains(.,'Next »')]
-
-   #  Esse teste verifica o aba envio de email
-E clicar em submeter
-   Input Text    locator=email    text=hildo18@gmail.com
-   Input Text    locator=phone    text=8598992353
-   Input Text    locator=username    text=Hildo
-   Input Text    locator=password    text=Bnb2020!
-   Input Text    locator=confirmpassword    text=Bnb2020!
-   Click Element  locator=sendemail
+  
+E clicar em Enviar
+   Click Element  locator=//button[@type='submit'][contains(.,'Submit')]
+   Sleep  5s
+   Click Element  locator=//button[@type='submit'][contains(.,'Submit')]
+   Sleep  2s
+   Click Element  locator=//button[@type='submit'][contains(.,'Submit')]
 Então sou direcionado para a mensagem de sucesso
-   Sleep  10
-   Wait Until Element Is Visible    locator=//h2[contains(.,'Sending e-mail success!')]
+   Sleep    5s
+   Wait Until Element Is Visible    locator=//p[contains(.,'Thank you for contacting us. We will get back to you soon!')]      
    # Wait Until Page Contains    Sending e-mail success!
-
+Quando informar os dados do "Contato" de forma inválida
+   Input Text    locator=et_pb_contact_name_0    text=hildo costa fontenele
+   Input Text    locator=et_pb_contact_email_0    text=hildo_costa3@hotmail.com
+   Input Text    locator=et_pb_contact_message_0   text=teste direcionado para mensagem de erro
+Então sou direcionado para a mensagem de erro
+   Sleep    5s
+   Wait Until Element Is Visible    locator=//p[@class='et_pb_contact_error_text'][contains(.,'You must be a human to submit this form.')]     
+   # Wait Until Page Contains    Sending e-mail success!
 
                                                 
 

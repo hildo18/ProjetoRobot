@@ -1,0 +1,22 @@
+1716896056631	geckodriver	INFO	Listening on 127.0.0.1:51829
+1716896059695	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51830" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\HILDOC~1\\AppData\\Local\\Temp\\rust_mozprofilerwUiFh"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1716896060624	Marionette	INFO	Marionette enabled
+1716896060864	Marionette	INFO	Listening on port 51865
+WebDriver BiDi listening on ws://127.0.0.1:51830
+Read port: 51865
+1716896061274	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:51830/devtools/browser/491f5fd2-a8cd-49ff-adc9-22cacff5dec1
+JavaScript error: https://ultimateqa.com/contact/ line 3 > injectedScript, line 3: ReferenceError: Waypoint is not defined
+JavaScript error: https://ultimateqa.com/contact/ line 3 > injectedScript, line 3: ReferenceError: Waypoint is not defined
+1716896074246	Marionette	INFO	Stopped listening on port 51865
+JavaScript warning: https://ultimateqa.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1, line 2: Script terminated by timeout at:
+ce@https://ultimateqa.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1:2:1070
+e@https://ultimateqa.com/wp-content/themes/Divi/js/scripts.min.js?ver=4.25.1:2:207063
+
+JavaScript warning: https://www.gstatic.com/recaptcha/releases/joHA60MeME-PNviL59xVH9zs/recaptcha__pt_br.js, line 347: Script terminated by timeout at:
+L@https://www.gstatic.com/recaptcha/releases/joHA60MeME-PNviL59xVH9zs/recaptcha__pt_br.js:347:444
+
+Dynamically enable window occlusion 1

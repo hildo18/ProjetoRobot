@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20240528 08:33:38.019" rpa="false" schemaversion="4">
+<suite id="s1" name="Cadastro Testes" source="C:\ProjetoRobot\ProjetoRobot\tests\cadastro_testes.robot">
+<test id="s1-t1" name="Caso de Teste 01 - Enviar contato válido" line="9">
+<kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240528 08:33:38.510" level="INFO">Opening browser 'firefox' to base url 'None'.</msg>
+<status status="PASS" starttime="20240528 08:33:38.510" endtime="20240528 08:33:50.172"/>
+</kw>
+<kw name="Dado que estou na tela de contato" library="cadastro_resources">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240528 08:33:50.172" level="INFO">Opening url 'https://ultimateqa.com/contact/'</msg>
+<status status="PASS" starttime="20240528 08:33:50.172" endtime="20240528 08:33:53.518"/>
+</kw>
+<status status="PASS" starttime="20240528 08:33:50.172" endtime="20240528 08:33:53.518"/>
+</kw>
+<kw name="Quando informar os dados do &quot;Contato&quot;" library="cadastro_resources">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=et_pb_contact_name_0</arg>
+<arg>text=hildo costa fontenele</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240528 08:33:53.534" level="INFO">Typing text 'hildo costa fontenele' into text field 'et_pb_contact_name_0'.</msg>
+<status status="PASS" starttime="20240528 08:33:53.534" endtime="20240528 08:33:53.851"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=et_pb_contact_email_0</arg>
+<arg>text=hildo_costa3@hotmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240528 08:33:53.851" level="INFO">Typing text 'hildo_costa3@hotmail.com' into text field 'et_pb_contact_email_0'.</msg>
+<status status="PASS" starttime="20240528 08:33:53.851" endtime="20240528 08:33:53.930"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=et_pb_contact_message_0</arg>
+<arg>text=teste direcionado para mensagem de sucesso</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240528 08:33:53.930" level="INFO">Typing text 'teste direcionado para mensagem de sucesso' into text field 'et_pb_contact_message_0'.</msg>
+<status status="PASS" starttime="20240528 08:33:53.930" endtime="20240528 08:33:53.993"/>
+</kw>
+<status status="PASS" starttime="20240528 08:33:53.534" endtime="20240528 08:33:53.993"/>
+</kw>
+<kw name="E clicar em Enviar" library="cadastro_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=//button[@type='submit'][contains(.,'Submit')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240528 08:33:53.993" level="INFO">Clicking element '//button[@type='submit'][contains(.,'Submit')]'.</msg>
+<status status="PASS" starttime="20240528 08:33:53.993" endtime="20240528 08:33:54.398"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240528 08:33:59.398" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240528 08:33:54.398" endtime="20240528 08:33:59.398"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=//button[@type='submit'][contains(.,'Submit')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240528 08:33:59.398" level="INFO">Clicking element '//button[@type='submit'][contains(.,'Submit')]'.</msg>
+<status status="PASS" starttime="20240528 08:33:59.398" endtime="20240528 08:34:03.588"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240528 08:34:05.589" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240528 08:34:03.588" endtime="20240528 08:34:05.589"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=//button[@type='submit'][contains(.,'Submit')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240528 08:34:05.589" level="INFO">Clicking element '//button[@type='submit'][contains(.,'Submit')]'.</msg>
+<status status="PASS" starttime="20240528 08:34:05.589" endtime="20240528 08:34:05.887"/>
+</kw>
+<status status="PASS" starttime="20240528 08:33:53.993" endtime="20240528 08:34:05.887"/>
+</kw>
+<kw name="Então sou direcionado para a mensagem de sucesso" library="cadastro_resources">
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240528 08:34:10.891" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240528 08:34:05.891" endtime="20240528 08:34:10.891"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=//p[contains(.,'Thank you for contacting us. We will get back to you soon!')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240528 08:34:10.891" endtime="20240528 08:34:10.936"/>
+</kw>
+<status status="PASS" starttime="20240528 08:34:05.891" endtime="20240528 08:34:10.936"/>
+</kw>
+<kw name="Fechar o navegador" library="cadastro_resources" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240528 08:34:11.207" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240528 08:34:10.936" endtime="20240528 08:34:11.207"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240528 08:34:11.207" endtime="20240528 08:34:15.511"/>
+</kw>
+<status status="PASS" starttime="20240528 08:34:10.936" endtime="20240528 08:34:15.511"/>
+</kw>
+<doc>Esse teste verifica o cadastro do seguro de um veiculo</doc>
+<tag>cadastro_contato</tag>
+<tag>regressivo</tag>
+<status status="PASS" starttime="20240528 08:33:38.510" endtime="20240528 08:34:15.511"/>
+</test>
+<test id="s1-t2" name="Caso de Teste 02 - Enviar contato inválido" line="17">
+<kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240528 08:34:15.515" level="INFO">Opening browser 'firefox' to base url 'None'.</msg>
+<status status="PASS" starttime="20240528 08:34:15.515" endtime="20240528 08:34:25.043"/>
+</kw>
+<kw name="Dado que estou na tela de contato" library="cadastro_resources">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240528 08:34:25.045" level="INFO">Opening url 'https://ultimateqa.com/contact/'</msg>
+<status status="PASS" starttime="20240528 08:34:25.045" endtime="20240528 08:34:28.075"/>
+</kw>
+<status status="PASS" starttime="20240528 08:34:25.043" endtime="20240528 08:34:28.075"/>
+</kw>
+<kw name="Quando informar os dados do &quot;Contato&quot; de forma inválida" library="cadastro_resources">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=et_pb_contact_name_0</arg>
+<arg>text=hildo costa fontenele</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240528 08:34:28.080" level="INFO">Typing text 'hildo costa fontenele' into text field 'et_pb_contact_name_0'.</msg>
+<status status="PASS" starttime="20240528 08:34:28.080" endtime="20240528 08:34:28.347"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=et_pb_contact_email_0</arg>
+<arg>text=hildo_costa3@hotmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240528 08:34:28.347" level="INFO">Typing text 'hildo_costa3@hotmail.com' into text field 'et_pb_contact_email_0'.</msg>
+<status status="PASS" starttime="20240528 08:34:28.347" endtime="20240528 08:34:28.474"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=et_pb_contact_message_0</arg>
+<arg>text=teste direcionado para mensagem de erro</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240528 08:34:28.474" level="INFO">Typing text 'teste direcionado para mensagem de erro' into text field 'et_pb_contact_message_0'.</msg>
+<status status="PASS" starttime="20240528 08:34:28.474" endtime="20240528 08:34:28.553"/>
+</kw>
+<status status="PASS" starttime="20240528 08:34:28.075" endtime="20240528 08:34:28.553"/>
+</kw>
+<kw name="E submeter o envio" library="cadastro_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=//button[@type='submit'][contains(.,'Submit')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240528 08:34:28.553" level="INFO">Clicking element '//button[@type='submit'][contains(.,'Submit')]'.</msg>
+<status status="PASS" starttime="20240528 08:34:28.553" endtime="20240528 08:34:28.982"/>
+</kw>
+<status status="PASS" starttime="20240528 08:34:28.553" endtime="20240528 08:34:28.982"/>
+</kw>
+<kw name="Então sou direcionado para a mensagem de erro" library="cadastro_resources">
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240528 08:34:33.983" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240528 08:34:28.982" endtime="20240528 08:34:33.983"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=//p[@class='et_pb_contact_error_text'][contains(.,'You must be a human to submit this form.')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240528 08:34:33.983" endtime="20240528 08:34:34.014"/>
+</kw>
+<status status="PASS" starttime="20240528 08:34:28.982" endtime="20240528 08:34:34.014"/>
+</kw>
+<kw name="Fechar o navegador" library="cadastro_resources" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240528 08:34:34.242" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240528 08:34:34.014" endtime="20240528 08:34:34.242"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240528 08:34:34.242" endtime="20240528 08:34:38.364"/>
+</kw>
+<status status="PASS" starttime="20240528 08:34:34.014" endtime="20240528 08:34:38.364"/>
+</kw>
+<doc>Esse teste verifica o cadastro do seguro de um veiculo</doc>
+<tag>cadastro_inválido</tag>
+<tag>regressivo</tag>
+<status status="PASS" starttime="20240528 08:34:15.515" endtime="20240528 08:34:38.364"/>
+</test>
+<doc>essa suite testa o cadastro de informações do site sampleapp</doc>
+<status status="PASS" starttime="20240528 08:33:38.019" endtime="20240528 08:34:38.364"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">cadastro_contato</stat>
+<stat pass="1" fail="0" skip="0">cadastro_inválido</stat>
+<stat pass="2" fail="0" skip="0">regressivo</stat>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Cadastro Testes">Cadastro Testes</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
